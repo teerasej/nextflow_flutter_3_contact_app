@@ -1,7 +1,11 @@
+import 'package:contact_app/controllers/contact_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class NewContactPage extends StatelessWidget {
-  const NewContactPage({super.key});
+  NewContactPage({super.key});
+
+  var controller = Get.put(ContactController());
 
   @override
   Widget build(BuildContext context) {
@@ -16,9 +20,15 @@ class NewContactPage extends StatelessWidget {
             Text('Name:'),
             TextField(
               decoration: InputDecoration(labelText: 'Name'),
+              onChanged: (String value) {
+                controller.name = value;
+              },
             ),
             TextField(
               decoration: InputDecoration(labelText: 'Email'),
+              onChanged: (String value) {
+                controller.email = value;
+              },
             ),
             SizedBox(
               height: 10,
@@ -26,7 +36,9 @@ class NewContactPage extends StatelessWidget {
             Container(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  controller.save();
+                },
                 child: Text('Save'),
               ),
             )
