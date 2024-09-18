@@ -10,12 +10,9 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Home'),
         actions: [
-          IconButton(
-            onPressed: () {
-              Get.toNamed('/new-contact');
-            },
-            icon: Icon(Icons.add),
-          )
+          IconButton(onPressed: (){
+            Get.toNamed('/newContract');
+          }, icon: Icon(Icons.add))
         ],
       ),
     );

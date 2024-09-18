@@ -1,5 +1,5 @@
 import 'package:contact_app/pages/home_page/home_page.dart';
-import 'package:contact_app/pages/new_contact_page/new_contact_page.dart';
+import 'package:contact_app/pages/new_contract_page/new_contract_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -26,9 +26,9 @@ class MyApp extends StatelessWidget {
           page: () => HomePage(),
         ),
         GetPage(
-          name: '/new-contact',
-          page: () => NewContactPage(),
-        )
+          name: '/newContract',
+          page: () => NewContractPage(),
+        ),
       ],
     );
   }
