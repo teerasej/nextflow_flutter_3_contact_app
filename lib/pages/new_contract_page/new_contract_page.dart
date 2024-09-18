@@ -23,6 +23,7 @@ class NewContractPage extends StatelessWidget {
               height: 10,
             ),
             Container(
+              width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {},
                 child: Text('Save'),
